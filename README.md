@@ -18,13 +18,6 @@ You can change plugin settings in the plugin panel:
 - Enable Clue Highlights: Highlight the clue tile location in the game world.
 - Customize colors for "good" and "bad" clue tiles.
 
-## Installation
-
-1. Download or clone this repository.
-2. Build using [RuneLite Plugin Hub workflow](https://github.com/runelite/plugin-hub).
-3. Copy the plugin to your RuneLite plugins folder or add it to your custom RuneLite client.
-4. Enable the **Level 3 Clues** plugin from the in-game plugin panel.
-
 # Future
 - Lots of updates and information eneded. Working on a panel version for all account types to setup good/bad/other types of categories of clues etc and will implemnent this in it.
 
