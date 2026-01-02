@@ -25,6 +25,11 @@ You can change plugin settings in the plugin panel:
 3. Copy the plugin to your RuneLite plugins folder or add it to your custom RuneLite client.
 4. Enable the **Level 3 Clues** plugin from the in-game plugin panel.
 
+# Future
+- Lots of updates and information eneded. Working on a panel version for all account types to setup good/bad/other types of categories of clues etc and will implemnent this in it.
+
+
+
 ## Contributing
 
 Contributions are welcome! If you have suggestions for additional clue logic or area restrictions, open an issue or submit a pull request.
@@ -32,7 +37,7 @@ Contributions are welcome! If you have suggestions for additional clue logic or 
 ## Credits
 
 - Inspired by community requests for skiller-friendly clue assistance.
-- Built using the RuneLite API.
+- Special Shoutout to Skill City <3
 
 ## License
 
