@@ -32,6 +32,8 @@ Contributions are welcome! If you have suggestions for additional clue logic or 
 - Inspired by community requests for skiller-friendly clue assistance.
 - Special Shoutout to Skill City <3
 
+- RSN: Rocket Money
+
 ## License
 
 [BSD 2-Clause](LICENSE)
