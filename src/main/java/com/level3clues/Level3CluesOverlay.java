@@ -1,4 +1,4 @@
-package com.example;
+package com.level3clues;
 
 import java.awt.Color;
 import java.awt.Dimension;

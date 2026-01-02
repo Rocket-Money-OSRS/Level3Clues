@@ -1,4 +1,4 @@
-package com.example;
+package com.level3clues;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -7,7 +7,6 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 import net.runelite.api.Client;
 import net.runelite.api.ItemComposition;
-import net.runelite.api.Skill;
 import net.runelite.api.coords.WorldPoint;
 import net.runelite.client.game.ItemManager;
 import net.runelite.client.plugins.cluescrolls.ClueScrollPlugin;

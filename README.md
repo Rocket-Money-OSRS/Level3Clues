@@ -34,4 +34,4 @@ Contributions are welcome! If you have suggestions for additional clue logic or 
 
 ## License
 
-[MIT](LICENSE)
+[BSD 2-Clause](LICENSE)

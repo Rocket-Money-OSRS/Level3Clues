@@ -1,9 +1,9 @@
-package com.example;
+package com.level3clues;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class ExamplePluginTest
+public class Level3CluesPluginTest
 {
 	public static void main(String[] args) throws Exception
 	{

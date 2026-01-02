@@ -1,4 +1,4 @@
-package com.example;
+package com.level3clues;
 
 import java.awt.Color;
 import net.runelite.client.config.Alpha;
@@ -90,6 +90,17 @@ public interface Level3CluesConfig extends Config
 	default Color badClueTextColor()
 	{
 		return Color.RED;
+	}
+
+	@ConfigItem(
+		keyName = "deprioritizeBadClues",
+		name = "Deprioritize Bad Clues",
+		description = "Makes 'Walk here' the default action for bad clues to prevent accidental pickup",
+		position = 20
+	)
+	default boolean deprioritizeBadClues()
+	{
+		return true;
 	}
 }
 
