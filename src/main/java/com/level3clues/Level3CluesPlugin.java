@@ -67,7 +67,7 @@ public class Level3CluesPlugin extends Plugin
 	private Client client;
 
 	@Inject
-	private Level3CluesService service;
+	private com.level3clues.evaluator.SkillerClueEvaluator evaluator;
 
 	@Inject
 	private ConfigManager configManager;
@@ -119,7 +119,7 @@ public class Level3CluesPlugin extends Plugin
 			trackedClues.put(itemId, clue);
 		}
 
-		boolean isGood = service.isClueGoodForSkiller(clue, clueScrollPlugin);
+		boolean isGood = evaluator.isClueGoodForSkiller(clue, clueScrollPlugin);
 		if (!isGood)
 		{
 			MenuEntry[] menuEntries = client.getMenuEntries();

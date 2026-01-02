@@ -22,20 +22,21 @@ import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayLayer;
 import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.OverlayUtil;
+import com.level3clues.evaluator.SkillerClueEvaluator;
 
 public class Level3CluesWorldOverlay extends Overlay
 {
 	private final Level3CluesPlugin plugin;
-	private final Level3CluesService service;
+	private final SkillerClueEvaluator evaluator;
 	private final Client client;
 
 	@Inject
-	private Level3CluesWorldOverlay(Level3CluesPlugin plugin, Level3CluesService service, Client client)
+	private Level3CluesWorldOverlay(Level3CluesPlugin plugin, SkillerClueEvaluator evaluator, Client client)
 	{
 		setPosition(OverlayPosition.DYNAMIC);
 		setLayer(OverlayLayer.ABOVE_SCENE);
 		this.plugin = plugin;
-		this.service = service;
+		this.evaluator = evaluator;
 		this.client = client;
 	}
 
@@ -88,7 +89,7 @@ public class Level3CluesWorldOverlay extends Overlay
 						ItemComposition itemComp = client.getItemDefinition(item.getId());
 						if (itemComp != null && itemComp.getIntValue(ParamID.CLUE_SCROLL) != -1)
 						{
-							boolean isGood = service.isClueGoodForSkiller(trackedClue, clueScrollPlugin);
+							boolean isGood = evaluator.isClueGoodForSkiller(trackedClue, clueScrollPlugin);
 							Color tileColor = isGood ? config.goodClueTileColor() : config.badClueTileColor();
 							Color textColor = isGood ? config.goodClueTextColor() : config.badClueTextColor();
 							String text = isGood ? "Good Clue" : "Bad Clue";

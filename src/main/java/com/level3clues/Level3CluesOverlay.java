@@ -9,18 +9,19 @@ import net.runelite.client.plugins.cluescrolls.clues.ClueScroll;
 import net.runelite.client.ui.overlay.OverlayPanel;
 import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.components.LineComponent;
+import com.level3clues.evaluator.SkillerClueEvaluator;
 
 public class Level3CluesOverlay extends OverlayPanel
 {
 	private final Level3CluesPlugin plugin;
-	private final Level3CluesService service;
+	private final SkillerClueEvaluator evaluator;
 
 	@Inject
-	private Level3CluesOverlay(Level3CluesPlugin plugin, Level3CluesService service)
+	private Level3CluesOverlay(Level3CluesPlugin plugin, SkillerClueEvaluator evaluator)
 	{
 		super(plugin);
 		this.plugin = plugin;
-		this.service = service;
+		this.evaluator = evaluator;
 		setPosition(OverlayPosition.TOP_LEFT);
 		setPriority(PRIORITY_HIGH);
 	}
@@ -45,7 +46,7 @@ public class Level3CluesOverlay extends OverlayPanel
 			return null;
 		}
 
-		boolean isGood = service.isClueGoodForSkiller(clue, clueScrollPlugin);
+		boolean isGood = evaluator.isClueGoodForSkiller(clue, clueScrollPlugin);
 
 		panelComponent.getChildren().add(LineComponent.builder()
 			.left("lvl 3: " + (isGood ? "Good" : "Skip"))
